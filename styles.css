@@ -32,7 +32,7 @@
 }
 
 
-.icon-container:hover .layer:nth-of-type(2) {
+/*.icon-container:hover .layer:nth-of-type(2) {
     animation: bounce-effect-layer2 0.5s ease-out;
 }
 
@@ -53,6 +53,18 @@
 .layer:nth-of-type(3) {
   animation: bounce-effect-layer3 var(--duration3) var(--delay3) ease-out;
 }
+*/
+.icon-container:hover .layer:nth-of-type(2) {
+  transform: rotate(22.5deg);
+  transition: transform 0.5s ease-out;
+}
+
+.icon-container:hover .layer:nth-of-type(3) {
+  transform: rotate(-22.5deg);
+  transition: transform 0.5s ease-out;
+}
+
+
 
 .large {
     width: 200px;
