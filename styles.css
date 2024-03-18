@@ -1,156 +1,63 @@
-
 @keyframes backgroundColorChange {
-  from {
-    background-color: #333; /* Start with grey */
-  }
-  to {
-    background-color: black; /* End with black */
-  }
+    from { background-color: #333; } /* Start with grey */
+    to { background-color: black; } /* End with black */
 }
 
-@keyframes bounce-effect-layer2 {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+body {
+    font-family: 'SF Mono', 'Menlo', 'Monaco', monospace, sans-serif;
+    margin: 0;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundColorChange 1.8s forwards;
 }
 
-@keyframes bounce-effect-layer3 {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.08); }
+.icon-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
 }
-
-
-/*.icon-container:hover .layer:nth-of-type(2) {
-    animation: bounce-effect-layer2 0.5s ease-out;
-}
-
-.icon-container:hover .layer:nth-of-type(3) {
-    animation: bounce-effect-layer3 0.6s ease-out;
-}
-.icon-container.touched .layer:nth-of-type(2) {
-  animation: bounce-effect-layer2 0.5s ease-out;
-}
-
-.icon-container.touched .layer:nth-of-type(3) {
-  animation: bounce-effect-layer3 0.6s ease-out;
-}
-.layer:nth-of-type(2) {
-  animation: bounce-effect-layer2 var(--duration2) var(--delay2) ease-out;
-}
-
-.layer:nth-of-type(3) {
-  animation: bounce-effect-layer3 var(--duration3) var(--delay3) ease-out;
-}
-*/
-/* Initial state */
-.layer:nth-of-type(2), .layer:nth-of-type(3) {
-  transition: transform 0.5s ease-out;
-}
-
-/* Hover state */
-.icon-container:hover .layer:nth-of-type(2) {
-  transform: rotate(22.5deg);
-}
-
-.icon-container:hover .layer:nth-of-type(3) {
-  transform: rotate(-22.5deg);
-}
-
-  body {
-            font-family: 'SF Mono', 'Menlo', 'Monaco', monospace, sans-serif;
-            margin: 0;
-            padding: 50;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-          
-         animation: backgroundColorChange 1.8s forwards;
-        }
-        
-       .icon-container {
-        width: 100px; /* Adjust based on your icon size */
-        height: 100px;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        margin: 0 auto; /* Ensure it's centered horizontally */
-    }
 
 .large {
     width: 200px;
     height: 200px;
 }
-   
+
 .main {
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              flex-wrap: wrap;
-              text-align: center;
-              max-width: 900px;
-              margin: 0; /* Adjusted to add space on top */
-          }
-    .container {
-        text-align: center;
-        max-width: 90%; /* Adjust container width */
-        margin: auto; /* Center the container horizontally */
-        display: flex; /* Use flex to center children vertically and horizontally */
-        flex-direction: column; /* Stack children vertically */
-        justify-content: center; /* Center children vertically */
-        align-items: center; /* Center children horizontally */
-        height: 100%; /* Take full height of its parent */
-    }
-        .icon-link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    max-width: 900px;
+    margin: 0;
+}
+
+.icon-link {
     color: black;
     text-decoration: none;
-    display: inline-block; /* Allows horizontal alignment with spacing */
-     margin-top: 150px; /* Increase this value as needed */
-    margin-right: 100px;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    vertical-align: center; /* Adjust if needed to align text vertically */
-    text-align: center; /* Centers the text under the icon */
+    display: inline-block;
+    margin: 30px 100px;
+    text-align: center;
 }
-       
-        
-        .layer {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-size: cover;
-            border-radius: 50%;
-            transition: transform 0.2s ease-out;
-        }
 
+.layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.2s ease-out;
+}
 
-   
-  
-    h1 {
-        font-size: 2.5rem;
-    }
-    p{
-        font-size: 1.2rem;
-        color: white;
-        text-decoration: none;
-    }
-    video {
-        width: 100%;
-        height: auto;
-        max-height: 60vh;
-    }
-badge {
-        width: 300;
-        height: 100;
-    }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-               
-            }
-            .icon-link {
-                color: white;
-            }
-        }
+@media (prefers-color-scheme: dark) {
+    .icon-link { color: white; }
+}
