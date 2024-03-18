@@ -65,7 +65,7 @@
             align-items: center;
             height: 100vh;
           
-         animation: backgroundColorChange 1.3s forwards;
+         animation: backgroundColorChange 1.8s forwards;
         }
         
        .icon-container {
@@ -105,11 +105,13 @@
     color: black;
     text-decoration: none;
     display: inline-block; /* Allows horizontal alignment with spacing */
-    margin: 50px 0px 20px; /* Top, right and bottom margins */
+     margin-top: 150px; /* Increase this value as needed */
+    margin-right: 100px;
+    margin-bottom: 20px;
+    margin-left: 100px;
     vertical-align: center; /* Adjust if needed to align text vertically */
     text-align: center; /* Centers the text under the icon */
 }
-        
        
         
         .layer {
