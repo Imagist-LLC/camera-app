@@ -82,7 +82,7 @@
             color: black;
             text-decoration: none;
             display: inline-block; /* Allows horizontal alignment with spacing */
-            margin: 20px 30px; /* Increased horizontal margin and space below icons */
+            margin: 20px 50px; /* Increased horizontal margin and space below icons */
             vertical-align: top; /* Keeps items aligned at the top */
             text-align: center; /* Centers the text under the icon */
         }
