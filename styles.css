@@ -4,16 +4,6 @@
     to { background-color: black; } /* End with black */
 }
 
-/* Keyframes for the front layer transformation */
-@keyframes frontLayerAnimation {
-    0%, 100% { 
-        transform: scale(1) rotate(0deg); 
-    }
-    50% { 
-        transform: scale(0.8) rotate(-22.5deg); /* Scales down and rotates */
-    }
-}
-
 body {
     font-family: 'SF Mono', 'Menlo', 'Monaco', monospace, sans-serif;
     margin: 0;
@@ -40,14 +30,45 @@ body {
     height: 200px;
 }
 
+@keyframes frontLayerAnimation {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+    }
+    50% { 
+        transform: scale(0.8) rotate(-22.5deg);
+    }
+}
+
+@keyframes rotateLayer2 {
+    to {
+        transform: rotate(22.5deg);
+    }
+}
+
+@keyframes rotateAndScaleLayer3 {
+    to {
+        transform: rotate(-22.5deg) scale(0.9);
+    }
+}
+
+.body {
+    /* Your existing body styles */
+    animation: backgroundColorChange 1.8s forwards;
+}
+
+.layer:nth-of-type(3) {
+    animation: frontLayerAnimation 1.8s forwards; /* Initial animation */
+}
+
+/* Hover state */
 .icon-container:hover .layer:nth-of-type(2) {
-    transform: rotate(22.5deg);
-    transition: transform 0.5s ease-out;
+    animation: rotateLayer2 0.5s ease-out forwards;
 }
 
 .icon-container:hover .layer:nth-of-type(3) {
-    animation: frontLayerAnimation 1.8s forwards; /* Sync with the body's background animation */
+    animation: rotateAndScaleLayer3 0.5s ease-out forwards;
 }
+
 
 .main {
     display: flex;
