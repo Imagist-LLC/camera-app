@@ -65,7 +65,7 @@
             align-items: center;
             height: 100vh;
           
-         animation: backgroundColorChange 0.3s forwards;
+         animation: backgroundColorChange 1.3s forwards;
         }
         
        .icon-container {
@@ -102,13 +102,13 @@
         height: 100%; /* Take full height of its parent */
     }
         .icon-link {
-            color: black;
-            text-decoration: none;
-            display: inline-block; /* Allows horizontal alignment with spacing */
-            margin: 20px 100px; /* Increased horizontal margin and space below icons */
-            vertical-align: center; /* Keeps items aligned at the top */
-            text-align: center; /* Centers the text under the icon */
-        }
+    color: black;
+    text-decoration: none;
+    display: inline-block; /* Allows horizontal alignment with spacing */
+    margin: 50px 0px 20px; /* Top, right and bottom margins */
+    vertical-align: center; /* Adjust if needed to align text vertically */
+    text-align: center; /* Centers the text under the icon */
+}
         
        
         
